@@ -1,0 +1,35 @@
+.card{
+    background-clip: padding-box;
+    box-shadow: 0 2px 6px 0 rgb(67 89 113 / 12%);
+}
+
+.card {
+   
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color:var( --topnav-color);
+    background-clip: border-box;
+    border: 0 solid #d9dee3;
+    border-radius: 0.5rem;
+}
+
+
+
+.topbanner{
+   
+    margin-top: 95px;
+}
+
+.welcometext{
+    color: var(--font-color);
+
+}
+
+.cardimg{
+    float: right;
+    width: 20%;
+}

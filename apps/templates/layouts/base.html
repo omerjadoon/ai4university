@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <meta name="title" content="Volt - Free Bootstrap 5 Dashboard">
+<meta name="author" content="Themesberg">
+<meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+<meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
+<link rel="canonical" href="https://appseed.us/admin-dashboards/django-dashboard-volt">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://demo.themesberg.com/volt-pro">
+<meta property="og:title" content="Volt - Free Bootstrap 5 Dashboard">
+<meta property="og:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+<meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://demo.themesberg.com/volt-pro">
+<meta property="twitter:title" content="Volt - Free Bootstrap 5 Dashboard">
+<meta property="twitter:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+<meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="/static/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/assets/img/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/assets/img/logo.png">
+<link rel="manifest" href="/static/assets/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="/static/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="/static/assets/css/styles.css">
+         <link rel="stylesheet" href="/static/assets/css/toggle.css">
+         <link rel="stylesheet" href="/static/assets/css/fullscreen.css">
+         <link rel="stylesheet" href="/static/assets/css/dashboard.css">
+
+        <title>Learning Management System - Ai4University</title>
+    </head>
+    <body id="body-pd" class="maincontainer">
+
+ <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+
+
+            <div class="outercontainer" style="display: flex; justify-content: space-between;" >      
+                <span class="container">
+   
+                    <label id="switch" class="switch">
+                            <input type="checkbox" onchange="toggleTheme()" id="slider">
+                            <span class="slider round"></span>
+                    </label>
+                    
+                </span>
+
+  
+  <span class="js-toggle-fullscreen-btn toggle-fullscreen-btn" aria-label="Enter fullscreen mode" hidden>
+    <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
+        <g class="icon-fullscreen-enter">
+            <path d="M 2 9 v -7 h 7" />
+            <path d="M 22 9 v -7 h -7" />
+            <path d="M 22 15 v 7 h -7" />
+            <path d="M 2 15 v 7 h 7" />
+        </g>
+        
+        <g class="icon-fullscreen-leave">
+            <path d="M 24 17 h -7 v 7" />
+            <path d="M 0 17 h 7 v 7" />
+            <path d="M 0 7 h 7 v -7" />
+            <path d="M 24 7 h -7 v -7" />
+        </g>
+    </svg>
+           
+             </div>
+
+
+             <div class="header__img">
+               
+                <img src="/static/assets/img/perfil.jpg" alt="">
+            </div>
+        </header>
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="{% url 'dashboard' %}" class="nav__logo">
+                        <!-- <i class='bx bx-layer nav__logo-icon'></i> -->
+                        <img src="/static/assets/img/ai.png" style="width: 30px;">
+                        <span class="nav__logo-name">Ai4University</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="{% url 'dashboard' %}" 
+                        class="nav__link {% if request.path == '/' %}active
+                        {% endif %} {% if request.path == '/home' %}active
+                        {% endif %}">
+                        <i class='bx bx-grid-alt nav__icon' ></i>
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+
+
+                        <a href="{% url 'exam' %}" 
+                        class="nav__link {% if request.resolver_match.url_name == 'exam' %}active
+                        {% endif %}">
+                            <i class='bx bx-book-bookmark nav__icon' ></i>
+                            <span class="nav__name">Exams Management</span>
+                        </a>
+                        
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-book-content nav__icon' ></i>
+                            <span class="nav__name">Question Bank</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-book-open nav__icon' ></i>
+                            <span class="nav__name">Courses</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">User Management</span>
+                        </a>
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Reports</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-cog nav__icon' ></i>
+                            <span class="nav__name">Settings</span>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <a href="{% url 'logout' %}" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+<!-- Specific Page JS goes HERE  -->    
+{% block stylesheets %}{% endblock stylesheets %}
+
+
+   
+    <main class="background">
+
+     
+
+      {% block content %}{% endblock content %} 
+
+     
+
+      {% include 'includes/footer.html' %}
+
+    </main>
+
+  {% include 'includes/scripts.html' %}
+    
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}  
+      
+</body>
+</html>
