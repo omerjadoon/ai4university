@@ -25,7 +25,9 @@
 	transition: .15s;
 }
 
-
+#uniname{
+	display: block;
+}
 .toggle-fullscreen-btn:hover path:nth-child(1),
 .toggle-fullscreen-btn:focus path:nth-child(1) {
 	transform: translate(-2px, -2px);
@@ -65,6 +67,9 @@
 	right: 70px;
   
 }
+#uniname{
+	display: none;
+}
 
 }
 
@@ -77,6 +82,10 @@
 	position: fixed;
 	right: 150px;
   
+}
+
+#uniname{
+	display: block;
 }
 
 }

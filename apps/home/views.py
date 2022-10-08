@@ -48,6 +48,14 @@ def home(request):
     return HttpResponse(html_template.render(context, request))
 
 
+@login_required(login_url="/login/")
+def lms(request):
+    print("lms")  
+    context = {'segment': 'index'}    
+    html_template = loader.get_template('home/lmsdashboard.html')
+    return HttpResponse(html_template.render(context, request))
+
+
 
 
 

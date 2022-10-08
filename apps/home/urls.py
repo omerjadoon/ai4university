@@ -10,6 +10,8 @@ urlpatterns = [
 path('', views.index, name='home'),
 url('home', views.home, name='dashboard'),
 url('exam', views.exam, name='exam'),
+url('login', views.home, name='login'),
+url('lms', views.lms, name='lms'),
     
     
     # Matches any html file
