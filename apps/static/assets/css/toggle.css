@@ -5,7 +5,7 @@
   --font-color: #000000;
   --white-color: #fff;
   --topnav-color: #fff;
-  --topicon-color: #4723D9;
+  --topicon-color: #630989;
 }
 .theme-dark {
   --color-primary: #17ed90;
@@ -89,7 +89,7 @@
 }
 
 input:checked + .slider {
-  background-color: var(--first-color);;
+  background-color: var(--first-color);
 }
 
 input:focus + .slider {

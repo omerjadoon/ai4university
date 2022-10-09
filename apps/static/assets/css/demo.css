@@ -37,7 +37,7 @@
 
 .roundbutton {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #8005AD;
   border: none;
   outline: none;
   height: 49px;
@@ -51,5 +51,13 @@
 }
 
 .roundbutton:hover {
-  background-color: #4d84e2;
+  background-color: #630989;
+}
+
+a{
+  color: #630989;
+}
+
+a:hover{
+  color: #8005AD;
 }

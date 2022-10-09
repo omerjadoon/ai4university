@@ -48,7 +48,7 @@ def home(request):
     return HttpResponse(html_template.render(context, request))
 
 
-@login_required(login_url="/login/")
+@login_required(login_url="/user/login/")
 def lms(request):
     print("lms")  
     context = {'segment': 'index'}    

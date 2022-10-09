@@ -8,22 +8,24 @@
 {% block content %}
 
     
-        <section class="  mt-lg-0 bg-soft d-flex align-items-center h-100"  >
-            <div class="container my-auto align-self-center ">
+        <section class=" card  mt-lg-0 bg-soft d-flex align-items-center" >
+            <div class="container">
                 
                 <div class="row justify-content-center form-bg-image" >
                     <div class="col-12 d-flex align-items-center justify-content-center">
                         <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                             <div class="text-center text-md-center mb-4 mt-md-0">
-                                <img src="/static/assets/img/logo2.png" style="width:350px" alt="">
+                                <img src="/static/assets/img/logo.png" style="width:160px" alt="">
                                 <br>
-                                
+                                <h1 class="mb-0 h3">
+                                   Ai4University - Student Sign IN
+                                </h1>
                                 <br />
-                                <p >
+                                <p style="background: #005a5a; color: white;padding: 10px">
                                     {% if msg %}
                                        <span > {{ msg | safe }} </span>
                                     {% else %}
-                                       <h4> Admin Login</h4>
+                                        Add your credentials
                                     {% endif %}                                     
                                 </p> 
                             </div>
@@ -66,7 +68,7 @@
                             <br />
                             
 
-                            <div class="d-flex justify-content-center align-items-center">
+                            <div class="d-flex justify-content-center align-items-center mt-4">
                                 <span class="fw-normal">
                                     Not registered?
                                     <a href="{% url 'register' %}" class="fw-bold">Create account</a>
