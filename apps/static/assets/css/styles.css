@@ -154,14 +154,15 @@ a{
   background-color: var(--white-color);
 }
 
+.maincontainer{
+  margin-left: 78px;
+}
+
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px){
   body{
     /*margin: calc(var(--header-height) + 1rem) 0 0 0;*/
     /*padding-left: calc(var(--nav-width) + 2rem);*/
-  }
-  main{
-    padding-left: calc(var(--nav-width));
   }
 
   .header{
@@ -190,7 +191,7 @@ a{
 
   /*Add padding body desktop*/
   .body-pd{
-    padding-left: calc(var(--nav-width) + 188px);
+    padding-left: calc(var(--nav-width) + 160px);
   }
 }
 
